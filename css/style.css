@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+:root {
+    --primary-color: #8B4513; /* SaddleBrown */
+    --secondary-color: #F5DEB3; /* Wheat */
+    --text-color: #333;
+    --bg-color: #FFF8F0;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--primary-color);
+}
+
+main {
+    width: 100%;
+    margin: 0;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: url('../images/home_image.jpg') no-repeat center center/cover;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #A0522D; /* Sienna */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+/* About Short Section */
+.about-short {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.about-short h2 {
+    margin-bottom: 1rem;
+}
+
+.about-short p {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.about-short a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.about-short a:hover {
+    color: #A0522D;
+    border-bottom-color: #A0522D;
+}
+
+
+/* Featured Services Section */
+.featured-services {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.featured-services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Service Page */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.service-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Price Page */
+.price-table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.price-table th, .price-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-table th {
+    background-color: var(--secondary-color);
+    font-family: var(--heading-font);
+}
+
+/* Booking Form */
+.booking-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form-message.success {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.form-message.error {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+
+/* About Us Page */
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+}
+
+/* Contact Page */
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.map-container {
+    text-align: center;
+}
+
+.map-container iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.service-details {
+    margin-top: 2rem;
+}
+
+.service-detail-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
